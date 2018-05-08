@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yuanshijia.demo_sim_blog.mapper.UserMapper">
+    
+    <!--注意这里的返回类型-->
+    <resultMap id="UserMap" type="com.yuanshijia.demo_sim_blog.entity.User">
+        <result column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="age" property="age" />
+    </resultMap>
+
+    <!--2.id和你的方法名一样，resultMap为上面的id名一致-->
+    <select id="getAllUser" resultMap="UserMap">
+        select id,name,age from user
+    </select>
+
+</mapper>

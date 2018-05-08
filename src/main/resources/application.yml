@@ -1,0 +1,46 @@
+
+#数据库连接配置
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/dbgirl
+    username: root
+    password: yuanshijia
+    driver-class-name: com.mysql.jdbc.Driver
+
+#mynatis配置
+mybatis:
+  #改成你的实体包位置
+  type-aliases-package: com.yuanshijia.demo_sim_blog.entity
+  #mapper加载路径
+  mapper-locations: classpath:mapper/*.xml
+  #myatbis配置文件
+  config-location: classpath:mybatis-conf.xml
+
+
+
+
+
+# 七牛云配置
+#qiniu:
+#  accessKey: accessKey
+#  secretKey: secretKey
+#  bucket: bucket
+#  cdnPrefix: cdn
+
+
+#  qiniu:
+#    accessKey: u6G_Z7-Kui_oeqfV9HqIMZ_eO3n9EmPzmdAmH-eq
+#    secretKey: _rLYEbWAA_vhm5_OYAT4Xowf7iEl4KqOuBO_RrJ3
+#    bucket: zblog
+#    path: p8e1flilo.bkt.clouddn.com
+
+#
+#spring:
+#  http:
+#      # multipart config
+#    multipart:
+#      enabled: true
+#      location: /home/earthchen/study/spring/SpringBootProjects/search-house/tmp
+#      file-size-threshold: 5MB
+#      max-request-size: 20MB
+
